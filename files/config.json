@@ -1,0 +1,114 @@
+{
+    "wifi": {
+        "connect": true,
+        "ssid": "SSID",
+        "pass": "PASS"
+    },
+    "webserver": {
+        "active": true,
+        "port": 8000
+    },
+    "params": {
+        "moistureSensorReadings": 3,
+        "mainRel": "rel4",
+        "sensorRel": "rel5"
+    },
+    "zones": {
+        "zon0": {
+            "active": true,
+            "name": "Zona 1",
+            "desc": "Left top",
+            "sensors": ["mois0"],
+            "minMoisture": 32,
+            "relays": {
+                "rel0": {
+                    "openTime": 5
+                }
+            },
+            "minFlow": 76,
+            "maxFlow": 200
+        },
+        "zon1": {
+            "active": true,
+            "name": "Zona 2",
+            "desc": "Left top",
+            "sensors": ["mois1"],
+            "minMoisture": 32,
+            "relays": {
+                "rel1": {
+                    "openTime": 10
+                }
+            },
+            "minFlow": 43,
+            "maxFlow": 200
+        }
+    },
+    "sensors": {
+        "mois0": {
+            "id": 1,
+            "active": true,
+            "pin": 20,
+            "acc": -203,
+            "minVal": 1000,
+            "maxVal": 2800
+        },
+        "mois1": {
+            "id": 2,
+            "active": true,
+            "pin": 21,
+            "acc": -203,
+            "minVal": 1000,
+            "maxVal": 2800
+        },
+        "flow0": {
+            "id": 3,
+            "active": true,
+            "pin": 12,
+            "minVal": 1000,
+            "maxVal": 2800
+        },
+        "temp0": {
+            "id": 4,
+            "active": true,
+            "pin": 13
+        }
+    },
+    "relays": {
+        "rel0": {
+            "type": "solenoid",
+            "active": true,
+            "openTime": 200,
+            "pin": 14
+        },
+        "rel1": {
+            "type": "solenoid",
+            "active": true,
+            "openTime": 200,
+            "pin": 27
+        },
+        "rel2": {
+            "type": "solenoid",
+            "active": true,
+            "openTime": 200,
+            "pin": 26
+        },
+        "rel3": {
+            "type": "solenoid",
+            "active": true,
+            "openTime": 200,
+            "pin": 25
+        },
+        "rel4": {
+            "type": "main",
+            "active": true,
+            "openTime": 0,
+            "pin": 33
+        },
+        "rel5": {
+            "type": "sensors",
+            "active": true,
+            "openTime": 0,
+            "pin": 32
+        }
+    }
+}
